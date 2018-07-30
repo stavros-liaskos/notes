@@ -1,2 +1,2 @@
-# notes
-A personal collection of helpfull notes, simple solutions and things to keep in mind
+# Notes
+A collection of helpfull notes, simple solutions, hacks and and things that I stumbled upon
