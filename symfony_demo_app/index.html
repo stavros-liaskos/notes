@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Stavros Liaskos">
+        <link rel="canonical" href="https://sfa-docs.com/symfony_demo_app/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Symfony Demo - Notes</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="..">Notes</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="..">Introduction</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Notes <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../apacheMac/">Apache</a>
+</li>
+                                    
+<li >
+    <a href="../docker/">Docker</a>
+</li>
+                                    
+<li >
+    <a href="../fail2ban/">Fail2Ban</a>
+</li>
+                                    
+<li >
+    <a href="../ffmpeg/">Ffmpeg</a>
+</li>
+                                    
+<li >
+    <a href="../hosts/">Hosts</a>
+</li>
+                                    
+<li >
+    <a href="../imageMagick/">ImageMagick</a>
+</li>
+                                    
+<li >
+    <a href="../ldap/">LDAP</a>
+</li>
+                                    
+<li >
+    <a href="../mysql/">MySQL</a>
+</li>
+                                    
+<li >
+    <a href="../vagrant/">Vagrant</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Symfony Demo</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../vagrant/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="disabled">
+                                <a rel="prev" >
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/stavros-liaskos/notes.git/edit/master/docs/symfony_demo_app.md">Edit on Github</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#symfony">Symfony</a></li>
+            <li><a href="#contents">Contents</a></li>
+            <li><a href="#1-directories">1. Directories</a></li>
+            <li><a href="#2-links">2. Links</a></li>
+            <li><a href="#3-files">3. Files</a></li>
+            <li><a href="#4-commands">4. Commands</a></li>
+            <li><a href="#5-database">5. Database</a></li>
+            <li><a href="#6-generate-entities-from-existing-db">6. Generate entities from existing DB</a></li>
+            <li><a href="#7-generate-admin-class-from-existing-entity">7. Generate admin class from existing entity</a></li>
+            <li><a href="#8-hide-id-field-from-forms">8. Hide id field from forms</a></li>
+            <li><a href="#9-sonata-admin-functions">9. Sonata admin functions</a></li>
+            <li><a href="#10-configure-generated-entities">10. Configure generated entities</a></li>
+            <li><a href="#11-styling-forms">11. Styling forms</a></li>
+            <li><a href="#12-foreign-keys">12. Foreign keys</a></li>
+            <li><a href="#13-translations">13. Translations</a></li>
+            <li><a href="#14-generate-dynamic-select-boxes">14. Generate dynamic select boxes</a></li>
+            <li><a href="#15-parent-child-entity-form-handling">15. Parent-Child Entity Form Handling</a></li>
+            <li><a href="#20-error-handling">20. Error handling</a></li>
+            <li><a href="#21-phpini">21. Php.ini</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="symfony">Symfony</h1>
+<h4 id="contents">Contents</h4>
+<ul>
+<li><a href="#1-directories">1. Directories</a> </li>
+<li><a href="#2-links">2. Links</a></li>
+<li><a href="#3-files">3. Files</a></li>
+<li><a href="#4-commands">4. Commands</a></li>
+<li><a href="#5-database">5. Database</a></li>
+<li><a href="#6-generate-entities-from-existing-db">6. Generate entities from existing DB</a></li>
+<li><a href="#7-generate-admin-class-from-existing-entity">7. Generate admin class from existing entity</a></li>
+<li><a href="#8-hide-id-field-from-forms">8. Hide id field from forms</a></li>
+<li><a href="#9-sonata-admin-functions">9. Sonata admin functions</a></li>
+<li><a href="#10-configure-generated-entities">10. Configure generated entities</a></li>
+<li><a href="#11-styling-forms">11. Styling forms</a></li>
+<li><a href="#12-foreign-keys">12. Foreign keys</a></li>
+<li><a href="#13-translations">13. Translations</a></li>
+<li><a href="#14-generate-dynamic-select-boxes">14. Generate dynamic select boxes</a></li>
+<li><a href="#15-parent-child-entity-form-handling">15. Parent-Child Entity Form Handling</a></li>
+<li><a href="#20-error-handling">20. Error handling</a></li>
+<li><a href="#21-php.ini">21. Php.ini</a></li>
+</ul>
+<h4 id="1-directories">1. Directories</h4>
+<pre><code class="bash">/vendor  # libraries (composer downloads here outside libraries)
+/app     # configuration
+/bin     # holds executable files that composer added
+/src     # bundles are here
+/web     # document root (public documents i.e. css and js)
+</code></pre>
+
+<p>Symfony 3.1.4 was successfully installed. Now you can:</p>
+<pre><code>* Configure your application in app/config/parameters.yml file.
+
+* Run your application:
+    1. Execute the php bin/console server:run command.
+    2. Browse to the http://localhost:8000 URL.
+
+* Read the documentation at http://symfony.com/doc
+</code></pre>
+<h4 id="2-links">2. Links</h4>
+<p>http://localhost:8000/config.php <em>Configurations Checker</em><br />
+http://localhost:8000/app_dev.php <em>Developement Enviroment</em><br />
+http://localhost:8000/app.php <em>Application</em> <br />
+http://localhost:8000/admin/dashboard  <em>admin interface</em></p>
+<h4 id="3-files">3. Files</h4>
+<p>/private/etc/php.ini    <em>THE php.ini</em><br />
+/app/AppKernel.php      <em>register bundles</em><br />
+/app/config/config.yml  <em>configure bundles</em>
+/app/config/routing.yml <em>urls of the app</em>
+/app/config/services.yml <em>urls of the app</em>
+/app/config/parameters.yml <em>database access</em></p>
+<h4 id="4-commands">4. Commands</h4>
+<pre><code class="bash">php bin/console cache:clear         # clear cache
+php bin/console server:run          # start php server
+php bin/symfony_requirements        # check requirements
+php bin/console debug:router        # lists all routes
+php bin/console                     # lists all available commands
+composer update                     # updates and installes/unistalles according to composer.json | also generates the parameters.yml from parameters.yml.dist 
+php bin/console assets:install      # make a hard copy of the assets in web/
+php bin/console doctrine:schema:update --dump-sql       # view but NOT execute the sql command
+php bin/console doctrine:schema:update --force          # executer the command above
+php bin/console doctrine:generate:entities AppBundle    # generate setters and getters i.e. /src/AppBundle/Entity/Car.php
+php app/console sonata:admin:generate AppBundle/Entity/Car # generated admin class from existing entity
+php bin/console assets:install --symlink                # if possible, make absolute symlinks in web/ if not, make a hard copy
+php bin/console doctrine:schema:validate                # validate schema
+
+</code></pre>
+
+<h4 id="5-database">5. Database</h4>
+<p>In order to connect to the database, a new user has to be added and granded all privilages. In Sequel Pro:
+Database-&gt;User Accounts..-&gt;Select root-&gt;Add host-&gt;%(is like a wildcard)-&gt;check all privilages and add the user</p>
+<h4 id="6-generate-entities-from-existing-db">6. Generate entities from existing DB</h4>
+<ol>
+<li>Ask Doctrine to introspect the database and generate the corresponding metadata files<br />
+<code>php bin/console doctrine:mapping:import --force AcmeBlogBundle xml</code>  </li>
+<li>Ask Doctrine to build related entity classes by executing the following two commands. First command is not necessery if the class is already created<br />
+<code>php bin/console doctrine:generate:entities AppBundle</code>  <br />
+<code>http://symfony.com/doc/current/doctrine/reverse_engineering.html</code>    </li>
+</ol>
+<h4 id="7-generate-admin-class-from-existing-entity">7. Generate admin class from existing entity</h4>
+<ol>
+<li>Run the folloing command and use exactly the same name as the entity in the end<br />
+<code>php bin/console sonata:admin:generate AppBundle/Entity/Car</code>    </li>
+<li>Add entry at /app/config/services.yml  </li>
+</ol>
+<pre><code class="bash">services:   
+    //here more services   
+    admin.car:   
+        class: AppBundle\Admin\CarAdmin  
+        arguments: [~, AppBundle\Entity\Car, ~]  
+        tags:  
+            - { name: sonata.admin, manager_type: orm, label: Car }  
+</code></pre>
+
+<h4 id="8-hide-id-field-from-forms">8. Hide id field from forms</h4>
+<p>Id's with autoincrement should not be visible and configurable about the user. Delete the entries for id's in:  <br />
+<code>/src/AppBundle/Admin/SomethingAdmin.php</code>  <br />
+at:<br />
+<code>protected function configureFormFields(FormMapper $formMapper)</code>    </p>
+<h4 id="9-sonata-admin-functions">9. Sonata admin functions</h4>
+<pre><code class="bash">configureDatagridFilters    #called when we use filters   
+configureListFields         #called when listing items  
+configureFormFields         #called when editing items
+configureShowFields         #called when showing items
+</code></pre>
+
+<h4 id="10-configure-generated-entities">10. Configure generated entities</h4>
+<p>Generated entities are automatically configured from AppBundle/Resources/config/doctrine directory. In order to configure them ourselves, we need to delete this directory and then add the following in EVERY entity:<br />
+ ```php
+ // at the top of the file
+ use Doctrine\ORM\Mapping as ORM;</p>
+<p>// on top of every entity class
+ /*<em>
+ * Image
+ * @ORM\Table(name="image")
+ * @ORM\Entity
+ </em>/</p>
+<p>// on top of every varialbe declared
+ /<em><em>
+ * @var string
+ </em>
+ * @ORM\Column(name="trans_path", type="string", length=64, nullable=true)
+ </em>
+ */
+ ```</p>
+<h4 id="11-styling-forms">11. Styling forms</h4>
+<h6 id="a-creating-tabs">a. Creating tabs</h6>
+<p>To separate form fields in different tabs, just configure <code>function configureFormFields</code> in the admin class. <br />
+For example, the following will create 2 tabs (General / Video Copies): <br />
+<code>php
+ $formMapper
+            -&gt;tab("General")
+                -&gt;add('optionId')
+            -&gt;end()
+            -&gt;end()
+                -&gt;tab("Video Copies")
+                -&gt;add('videoCopies', 'sonata_type_collection', array(
+                    'by_reference' =&gt; false
+                    ), array(
+                        'edit' =&gt; 'inline',
+                        'inline' =&gt; 'table'
+                    )
+                )
+            -&gt;end()
+        ;</code></p>
+<h4 id="12-foreign-keys">12. Foreign keys</h4>
+<p>In order to implement the sql foreign keys functionality, these steps are needed in the Entities. For example Alpha.id has OneToMany with Beta.alhpa_ID. <br />
+ In Alpha.php:</p>
+<p><code>php
+  /**
+  * @ORM\OneToMany(targetEntity="Beta", mappedBy="alhpa_ID", cascade={"persist"}, orphanRemoval=true)
+  *
+  */
+ private $betas;</code>     <br />
+  In Alpha.php
+ <code>php
+public function __construct() {
+    $this-&gt;betas = new \Doctrine\Common\Collections\ArrayCollection();
+}</code>  <br />
+ In Alpha.php  //where lightOptions = betas (too long to change)
+ ```php
+   public function setLightOptions($lightOptions)
+    {
+        if (count($lightOptions) &gt; 0) {
+            foreach ($lightOptions as $i) {
+                $this-&gt;addLightOption($i);
+            }
+        }</p>
+<pre><code>    return $this;
+}
+
+public function addLightOption(LightOption $lightOption)
+{
+    $lightOption-&gt;setCarId($this);
+
+    $this-&gt;lightOptions-&gt;add($lightOption);
+}
+
+public function removeLightOption(LightOption $lightOption)
+{
+    $this-&gt;lightOptions-&gt;removeElement($lightOption);
+}
+
+public function getLightOptions()
+{
+    return $this-&gt;lightOptions;
+}
+</code></pre>
+<p><code>In Beta.php</code>php
+/<em><em>
+</em> @var integer
+</em>
+<em> @ORM\ManyToOne(targetEntity="Alpha", inversedBy="betas", cascade={"detach"})
+</em> @ORM\JoinColumn(name="beta_ID", referencedColumnName="id")
+*/
+private $beta_ID;
+ ```</p>
+<h4 id="13-translations">13. Translations</h4>
+<p>Find out how to add the translations bundle. This manual expects that translation bundle is already installed.<br />
+If you have labels in <code>config.yml</code> that are previewed in the Dashboard i.e :   </p>
+<pre><code class="yml">sonata_admin:
+    dashboard:
+        blocks:
+            -
+                position: left
+                type: sonata.admin.block.admin_list
+                settings:
+                    groups: [demoapp.admin.group.car]
+        groups:
+            demoapp.admin.group.car:
+                label: demoapp.admin.group.car
+                icon:  '&lt;i class=&quot;fa fa-car&quot;&gt;&lt;/i&gt;'
+                items: [admin.car, admin.video,  admin.demooption, admin.feature, admin.image]
+</code></pre>
+
+<p>in order to translate these labels you need to configure first the <code>services.yml</code> like that:  </p>
+<pre><code class="yml">admin.car:
+    class: AppBundle\Admin\CarAdmin
+    arguments: [~, AppBundle\Entity\Car, ~]
+    tags:
+        - { name: sonata.admin, manager_type: orm, label: demoapp.admin.car }
+# do the same for admin.video,  admin.demooption, admin.feature, admin.image   of course
+</code></pre>
+
+<p>then add these 2 files for each language you want to support:<br />
+<code>messages.de.yml</code></p>
+<pre><code class="yml">demoapp.admin.car:
+        Fahrzeuge
+demoapp.admin.video:
+        Videos
+# etc etc--
+</code></pre>
+
+<p>and
+<code>SonataAdminBundle.de.yml</code></p>
+<pre><code class="yml">demoapp.admin.group.car:
+        Fahrzeuge
+</code></pre>
+
+<h4 id="14-generate-dynamic-select-boxes">14. Generate dynamic select boxes</h4>
+<p>Let's take a live example from demo app. There are three tables like that: Cars (OneToMany) LightOptions (OneToMany) Features.<br />
+When the user wants to add a new feature, it should be relative to a light option and a car. So, a acceptable configuration would be to have a select box for the Car
+and then a dynamicly generated select box for ONLY the AVAILABLE LightOptions of that car! HTF are we gonna do it..?   </p>
+<ol>
+<li>install FOSjRoutingBundle, register, enable etc etc..</li>
+<li>copy this: vendor/sonata-project/admin-bundle/Resources/views/CRUD/base_edit.html.twig   to: src/AppBundle/Resources/views/Feature/base_edit.html.twig</li>
+<li>add the following lines to the new above file </li>
+</ol>
+<pre><code class="php">&lt;script src=&quot;{{ asset('bundles/fosjsrouting/js/router.js') }}&quot;&gt;&lt;/script&gt;
+</code></pre>
+
+<ol>
+<li>configure services.yml for feature to:  </li>
+</ol>
+<pre><code class="yml">
+    admin.feature:
+        class: AppBundle\Admin\FeatureAdmin
+        arguments: [~, AppBundle\Entity\Feature, AppBundle:FeatureAdmin]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: lightapp.admin.feature }
+</code></pre>
+
+<ol>
+<li>add $cars to Feature.php (and setters getters..): </li>
+</ol>
+<pre><code class="php">    /**
+     * @var string
+     *
+     */
+    private $cars;
+</code></pre>
+
+<ol>
+<li>in configureFormFields in FeatureAdmin.php change lightoptionId to :  </li>
+</ol>
+<pre><code class="php">-&gt;add('lightoptionId', EntityType::class, array(
+    'class' =&gt; 'AppBundle:Lightoption',
+    'query_builder' =&gt; function (EntityRepository $er) {
+        return $er-&gt;createQueryBuilder('u')
+            -&gt;orderBy('u.optionId', 'ASC');
+    },
+    'choice_label' =&gt; 'optionId',
+))
+</code></pre>
+
+<ol>
+<li>AND also add this function and this 2 lines on top:</li>
+</ol>
+<pre><code class="php">    use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+    use Doctrine\ORM\EntityRepository;
+    // in your admin class
+    public function getTemplate($name)
+    {
+        switch ($name) {
+            case 'edit':
+                return 'AppBundle:Feature:base_edit.html.twig';
+                break;
+            default:
+                return parent::getTemplate($name);
+                break;
+        }
+    }
+</code></pre>
+
+<ol>
+<li>create src/AppBundle/Controller/FeatureAdminController.php:</li>
+</ol>
+<pre><code class="php">namespace AppBundle\Controller;
+use Sonata\AdminBundle\Controller\CRUDController as Controller;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use GD\AdminBundle\Entity\Merchant;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+class FeatureAdminController extends Controller
+{
+    public function getLightOptionsFromCarAction($carId)
+    {   
+        $html = &quot;&quot;;
+        $option = $this-&gt;getDoctrine()
+            -&gt;getRepository('AppBundle:Lightoption')
+            -&gt;findByCarId($carId);
+        foreach($option as $cat){
+            $html .= '&lt;option value=&quot;'.$cat-&gt;getId().'&quot; &gt;'.$cat-&gt;getOptionId().'&lt;/option&gt;';
+        }
+        return new Response($html, 200);
+    }
+}
+</code></pre>
+
+<h6 id="links">Links</h6>
+<p>http://symfony.com/doc/master/bundles/FOSJsRoutingBundle/index.html<br />
+http://stackoverflow.com/questions/10118868/how-to-use-ajax-within-sonata-admin-forms<br />
+http://symfony.com/doc/current/reference/forms/types/entity.html#query-builder<br />
+http://stackoverflow.com/questions/9052916/how-to-use-select-box-related-on-another-select-box   </p>
+<h4 id="15-parent-child-entity-form-handling">15. Parent-Child Entity Form Handling</h4>
+<p>Given Translation Entity and Copy Entity (translation|"parent" , copy|"child") with OneToMany between them. We want to have on parent's create form a btn "add new" for the copies.
+The subform should NOT contain the field <code>translation_ID</code>. It should be set automatically. One the other hand, when we add a new Copy, then there should be a select box with all the available translations and choose from them. <br />
+Add/Conf in Translation.php:   </p>
+<pre><code class="php">/**
+ * @ORM\OneToMany(targetEntity=&quot;Copy&quot;, mappedBy=&quot;translationId&quot;, cascade={&quot;persist&quot;}, orphanRemoval=true)
+ *
+ */
+private $copies;
+//add setters,getters and construct for $copies
+public function __toString() {
+    return (string) $this-&gt;getOptionId();
+}
+</code></pre>
+
+<p>Edit formMapper of CopyAdmin.php:   </p>
+<pre><code class="php">//more adds..
+if ($this-&gt;getRequest()-&gt;get('code') !== 'admin.translation') {
+     $em = $this-&gt;modelManager-&gt;getEntityManager('AppBundle\Entity\Translation');
+
+    $query = $em-&gt;createQueryBuilder('c')
+            -&gt;select('c')
+            -&gt;from('AppBundle:Translation', 'c');
+   $formMapper-&gt;add('translationId', 'sonata_type_model', array(
+        'required' =&gt; true,
+        'query' =&gt; $query,
+        'btn_add' =&gt; false
+    ));
+}
+$formMapper-&gt;end();
+</code></pre>
+
+<p>Edit formMapper of TranslationAdmin.php:</p>
+<pre><code class="php">-&gt;add('copies', 'sonata_type_collection', array(
+        'by_reference' =&gt; false
+            ), array(
+                'edit' =&gt; 'inline',
+                'inline' =&gt; 'table'
+            )
+    )
+</code></pre>
+
+<h4 id="20-error-handling">20. Error handling</h4>
+<ol>
+<li>when running <code>php bin/console doctrine:schema:validate</code> and the error is <code>[Database] FAIL - The database schema is not in sync with the current mapping file.</code>.  We have to export the db, empty the tables, run <code>php bin/console doctrine:schema:update --dump-sql</code> and then <code>php bin/console doctrine:schema:update -f</code> and in the end import the previous dumped db.</li>
+<li>Populate Database. When trunctate or instert is needed, the FK should be disabled in order for them to work. First run <code>SET FOREIGN_KEY_CHECKS = 0;</code> then do the changes and then run <code>SET FOREIGN_KEY_CHECKS = 0;</code></li>
+</ol>
+<h4 id="21-phpini">21. Php.ini</h4>
+<p>restart php server for changes to have effect!!!</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>MIT</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
