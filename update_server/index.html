@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Stavros Liaskos">
-        <link rel="canonical" href="https://sfa-docs.com/apacheMac/">
+        <link rel="canonical" href="https://sfa-docs.com/update_server/">
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Apache - Notes</title>
+        <title>Update Server - Notes</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -49,12 +49,12 @@
                             <li >
                                 <a href="..">Introduction</a>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Notes <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li class="active">
-    <a href="./">Apache</a>
+<li >
+    <a href="../apacheMac/">Apache</a>
 </li>
                                     
 <li >
@@ -94,7 +94,7 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Scripts <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -106,8 +106,8 @@
     <a href="../sendBackup/">Send Backup</a>
 </li>
                                     
-<li >
-    <a href="../update_server/">Update Server</a>
+<li class="active">
+    <a href="./">Update Server</a>
 </li>
                                     
 <li >
@@ -124,17 +124,17 @@
                             </a>
                         </li>
                             <li >
-                                <a rel="next" href="..">
+                                <a rel="next" href="../sendBackup/">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li >
-                                <a rel="prev" href="../docker/">
+                                <a rel="prev" href="../vagrantDown/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://github.com/stavros-liaskos/notes.git/edit/master/docs/apacheMac.md">Edit on Github</a>
+                                <a href="https://github.com/stavros-liaskos/notes.git/edit/master/docs/update_server.md">Edit on Github</a>
                             </li>
                     </ul>
                 </div>
@@ -144,17 +144,24 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#commands">Commands</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h2 id="commands">Commands</h2>
-<pre><code class="bash">apachectl configtest        # test configuration
-apachectl -t                # test configuration
-sudo service apache2 reload # restart apache
-sudo apachectl restart      # restart apache
-/etc/apache2/users/         # users config
+<pre><code class="bash">#!/bin/bash
+# redirect stdout/stderr to a file
+exec &amp;&gt; update.log
+
+echo &quot;Stopping processes for updating...&quot;
+sudo gitlab-ctl stop unicorn
+sudo gitlab-ctl stop sidekiq
+sudo gitlab-ctl stop nginx
+
+echo &quot;Updating...&quot;
+sudo apt-get update &amp;&amp; sudo apt-get upgrade -y
+
+echo &quot;Starting Gitlab...&quot;
+sudo gitlab-ctl restart
 </code></pre></div>
         </div>
 

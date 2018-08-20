@@ -46,12 +46,32 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://sfa-docs.com/symfony_demo_app/</loc>
+     <lastmod>2018-08-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://sfa-docs.com/vagrant/</loc>
      <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://sfa-docs.com/symfony_demo_app/</loc>
+     <loc>https://sfa-docs.com/mirror_gitlab_servers/</loc>
+     <lastmod>2018-08-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://sfa-docs.com/sendBackup/</loc>
+     <lastmod>2018-08-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://sfa-docs.com/update_server/</loc>
+     <lastmod>2018-08-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://sfa-docs.com/vagrantDown/</loc>
      <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>

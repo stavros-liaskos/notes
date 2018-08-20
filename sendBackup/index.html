@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Stavros Liaskos">
-        <link rel="canonical" href="https://sfa-docs.com/apacheMac/">
+        <link rel="canonical" href="https://sfa-docs.com/sendBackup/">
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Apache - Notes</title>
+        <title>Send Backup - Notes</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -49,12 +49,12 @@
                             <li >
                                 <a href="..">Introduction</a>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Notes <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li class="active">
-    <a href="./">Apache</a>
+<li >
+    <a href="../apacheMac/">Apache</a>
 </li>
                                     
 <li >
@@ -94,7 +94,7 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Scripts <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -102,8 +102,8 @@
     <a href="../mirror_gitlab_servers/">Mirror Servers</a>
 </li>
                                     
-<li >
-    <a href="../sendBackup/">Send Backup</a>
+<li class="active">
+    <a href="./">Send Backup</a>
 </li>
                                     
 <li >
@@ -124,17 +124,17 @@
                             </a>
                         </li>
                             <li >
-                                <a rel="next" href="..">
+                                <a rel="next" href="../mirror_gitlab_servers/">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li >
-                                <a rel="prev" href="../docker/">
+                                <a rel="prev" href="../update_server/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://github.com/stavros-liaskos/notes.git/edit/master/docs/apacheMac.md">Edit on Github</a>
+                                <a href="https://github.com/stavros-liaskos/notes.git/edit/master/docs/sendBackup.md">Edit on Github</a>
                             </li>
                     </ul>
                 </div>
@@ -144,17 +144,24 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#commands">Commands</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h2 id="commands">Commands</h2>
-<pre><code class="bash">apachectl configtest        # test configuration
-apachectl -t                # test configuration
-sudo service apache2 reload # restart apache
-sudo apachectl restart      # restart apache
-/etc/apache2/users/         # users config
+<pre><code class="bash">#!/bin/bash
+# redirect stdout/stderr to a file
+exec &amp;&gt; sendBackUp.log
+
+VCS2_ROOT=&quot;root@192.119.163.102&quot;
+BACKUP_PATH=&quot;/var/opt/gitlab/backups/&quot;
+
+echo &quot;#############################################&quot;
+echo &quot;#   Today is $(date)   #&quot;
+echo &quot;#############################################&quot;
+
+
+echo &quot;Sending backup to vcs2...&quot;
+rsync -vuar &quot;$BACKUP_PATH&quot;*_gitlab_backup.tar &quot;$VCS2_ROOT&quot;:&quot;$BACKUP_PATH&quot;
 </code></pre></div>
         </div>
 

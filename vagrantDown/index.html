@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Stavros Liaskos">
-        <link rel="canonical" href="https://sfa-docs.com/apacheMac/">
+        <link rel="canonical" href="https://sfa-docs.com/vagrantDown/">
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Apache - Notes</title>
+        <title>VagrantDown - Notes</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -49,12 +49,12 @@
                             <li >
                                 <a href="..">Introduction</a>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Notes <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li class="active">
-    <a href="./">Apache</a>
+<li >
+    <a href="../apacheMac/">Apache</a>
 </li>
                                     
 <li >
@@ -94,7 +94,7 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Scripts <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -110,8 +110,8 @@
     <a href="../update_server/">Update Server</a>
 </li>
                                     
-<li >
-    <a href="../vagrantDown/">VagrantDown</a>
+<li class="active">
+    <a href="./">VagrantDown</a>
 </li>
                                 </ul>
                             </li>
@@ -124,17 +124,17 @@
                             </a>
                         </li>
                             <li >
-                                <a rel="next" href="..">
+                                <a rel="next" href="../update_server/">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
-                            <li >
-                                <a rel="prev" href="../docker/">
+                            <li class="disabled">
+                                <a rel="prev" >
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://github.com/stavros-liaskos/notes.git/edit/master/docs/apacheMac.md">Edit on Github</a>
+                                <a href="https://github.com/stavros-liaskos/notes.git/edit/master/docs/vagrantDown.md">Edit on Github</a>
                             </li>
                     </ul>
                 </div>
@@ -144,17 +144,19 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#commands">Commands</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h2 id="commands">Commands</h2>
-<pre><code class="bash">apachectl configtest        # test configuration
-apachectl -t                # test configuration
-sudo service apache2 reload # restart apache
-sudo apachectl restart      # restart apache
-/etc/apache2/users/         # users config
+<pre><code class="bash">echo &quot;vagrantDown: finding all runnning vagrant boxes&quot;
+vagrant global-status | awk '/running/{print $1}' &gt;&gt; /tmp/vagrantRunning.txt
+sleep 3
+echo &quot;vagrantDown: shutting down all running boxes&quot;
+while read p; do
+ echo &quot;halting box&quot; $p
+ vagrant halt $p
+done &lt;/tmp/vagrantRunning.txt
+rm /tmp/vagrantRunning.txt
 </code></pre></div>
         </div>
 
