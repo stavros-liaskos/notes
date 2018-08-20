@@ -266,7 +266,6 @@ and then a dynamicly generated select box for ONLY the AVAILABLE LightOptions of
 3. add the following lines to the new above file 
 ```php
 <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
-<script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
 ```
 4. configure services.yml for feature to:  
 ```yml
