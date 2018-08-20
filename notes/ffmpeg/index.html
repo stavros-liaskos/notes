@@ -6,12 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Stavros Liaskos">
-        
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>Notes</title>
-        <link href="css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
+        <link rel="canonical" href="https://sfa-docs.com/notes/ffmpeg/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Ffmpeg - Notes</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -19,8 +19,8 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <script src="js/jquery-1.10.2.min.js" defer></script>
-        <script src="js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
@@ -39,7 +39,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href=".">Notes</a>
+                    <a class="navbar-brand" href="../..">Notes</a>
                 </div>
 
                 <!-- Expanded navigation -->
@@ -47,63 +47,63 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li >
-                                <a href=".">Introduction</a>
+                                <a href="../..">Introduction</a>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">CSS <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="css/selectors/">Selectors</a>
+    <a href="../../css/selectors/">Selectors</a>
 </li>
                                     
 <li >
-    <a href="css/line_height/">Line Heigh</a>
+    <a href="../../css/line_height/">Line Heigh</a>
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Notes <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="notes/apacheMac/">Apache</a>
+    <a href="../apacheMac/">Apache</a>
 </li>
                                     
 <li >
-    <a href="notes/docker/">Docker</a>
+    <a href="../docker/">Docker</a>
 </li>
                                     
 <li >
-    <a href="notes/fail2ban/">Fail2Ban</a>
+    <a href="../fail2ban/">Fail2Ban</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Ffmpeg</a>
 </li>
                                     
 <li >
-    <a href="notes/ffmpeg/">Ffmpeg</a>
+    <a href="../hosts/">Hosts</a>
 </li>
                                     
 <li >
-    <a href="notes/hosts/">Hosts</a>
+    <a href="../imageMagick/">ImageMagick</a>
 </li>
                                     
 <li >
-    <a href="notes/imageMagick/">ImageMagick</a>
+    <a href="../ldap/">LDAP</a>
 </li>
                                     
 <li >
-    <a href="notes/ldap/">LDAP</a>
+    <a href="../mysql/">MySQL</a>
 </li>
                                     
 <li >
-    <a href="notes/mysql/">MySQL</a>
+    <a href="../symfony_demo_app/">Symfony Demo</a>
 </li>
                                     
 <li >
-    <a href="notes/symfony_demo_app/">Symfony Demo</a>
-</li>
-                                    
-<li >
-    <a href="notes/vagrant/">Vagrant</a>
+    <a href="../vagrant/">Vagrant</a>
 </li>
                                 </ul>
                             </li>
@@ -112,19 +112,19 @@
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="scripts/mirror_gitlab_servers/">Mirror Servers</a>
+    <a href="../../scripts/mirror_gitlab_servers/">Mirror Servers</a>
 </li>
                                     
 <li >
-    <a href="scripts/sendBackup/">Send Backup</a>
+    <a href="../../scripts/sendBackup/">Send Backup</a>
 </li>
                                     
 <li >
-    <a href="scripts/update_server/">Update Server</a>
+    <a href="../../scripts/update_server/">Update Server</a>
 </li>
                                     
 <li >
-    <a href="scripts/vagrantDown/">VagrantDown</a>
+    <a href="../../scripts/vagrantDown/">VagrantDown</a>
 </li>
                                 </ul>
                             </li>
@@ -136,8 +136,18 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
+                            <li >
+                                <a rel="next" href="../fail2ban/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../hosts/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
                             <li>
-                                <a href="https://github.com/stavros-liaskos/notes.git/">Github</a>
+                                <a href="https://github.com/stavros-liaskos/notes.git/edit/master/docs/notes/ffmpeg.md">Edit on Github</a>
                             </li>
                     </ul>
                 </div>
@@ -145,15 +155,57 @@
         </div>
 
         <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#convertcompress-all-videos-in-mp4-and-webm-format">Convert/compress all videos in mp4 and webm format</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
 
-    <div class="row-fluid">
-      <div id="main-content" class="span12">
-        <h1 id="404-page-not-found" style="text-align: center">404</h1>
-        <p style="text-align: center"><strong>Page not found</strong></p>
-      </div>
-    </div>
+<h2 id="convertcompress-all-videos-in-mp4-and-webm-format">Convert/compress all videos in mp4 and webm format</h2>
+<pre><code class="bash">#!/bin/bash
 
+mkdir output
 
+for i in *.mov;  
+  do name=`echo $i | cut -d'.' -f1`;
+  echo $name;
+
+  ffmpeg -i &quot;$i&quot; -vcodec libvpx -qmin 0 -qmax 50 -crf 20 -b:v 1M -acodec libvorbis &quot;./output/$name.webm&quot;;
+done
+
+for i in *.mov;  
+  do name=`echo $i | cut -d'.' -f1`;
+  echo $name;
+
+  ffmpeg -i &quot;$i&quot; -vcodec h264 -acodec aac -strict -2 -crf 28 &quot;./output/$name.mp4&quot;;
+done
+
+# mv output/* ./  
+# rm -rf *.m4v .mov output
+</code></pre>
+
+<p>VP9</p>
+<pre><code class="bash">ffmpeg -i video.mov -vf scale=-1:720 -c:v libvpx-vp9 -pass 2 -pix_fmt yuv420p -b:v 0 -crf 15 -threads 2 -speed 2 -tile-columns 6 -frame-parallel 1 -auto-alt-ref 1 -lag-in-frames 25 -c:a libopus -b:a 320k -f webm video_vp9_scale=1:720.webm
+video_vp9_scale=1:720.webm
+
+ffmpeg -i video.mov -vf scale=720:-1 -c:v libvpx-vp9 -pass 2 -pix_fmt yuv420p -b:v 0 -crf 15 -threads 2 -speed 2 -tile-columns 6 -frame-parallel 1 -auto-alt-ref 1 -lag-in-frames 25 -c:a libopus -b:a 320k -f webm video_vp9_scale=720:-1.webm
+video_vp9_scale=720:-1.webm
+</code></pre>
+
+<p>VP8 WEBM</p>
+<pre><code class="bash">ffmpeg -i video.mov -vcodec libvpx -qmin 0 -qmax 50 -crf 20 -b:v 1M -acodec libvorbis video-crf20-b:v1M.webm
+
+</code></pre>
+
+<p>MP4</p>
+<pre><code class="bash">ffmpeg -i video.mov -vcodec h264 -acodec aac -strict -2 -crf 28 video-crf28.mp4
+
+</code></pre>
+
+<p>COMPAT MODE MP4</p>
+<pre><code class="bash">ffmpeg -an -i video.mov -vcodec libx264 -pix_fmt yuv420p -crf 28 -profile:v baseline -level 3 video-28compat.mp4
+</code></pre></div>
         </div>
 
         <footer class="col-md-12">
@@ -162,11 +214,11 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = "",
+            var base_url = "../..",
                 shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
         </script>
-        <script src="js/base.js" defer></script>
-        <script src="search/main.js" defer></script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
     <div class="modal-dialog">

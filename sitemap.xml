@@ -6,72 +6,82 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://sfa-docs.com/apacheMac/</loc>
+     <loc>https://sfa-docs.com/css/selectors/</loc>
      <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://sfa-docs.com/docker/</loc>
+     <loc>https://sfa-docs.com/css/line_height/</loc>
      <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://sfa-docs.com/fail2ban/</loc>
+     <loc>https://sfa-docs.com/notes/apacheMac/</loc>
      <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://sfa-docs.com/ffmpeg/</loc>
+     <loc>https://sfa-docs.com/notes/docker/</loc>
      <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://sfa-docs.com/hosts/</loc>
+     <loc>https://sfa-docs.com/notes/fail2ban/</loc>
      <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://sfa-docs.com/imageMagick/</loc>
+     <loc>https://sfa-docs.com/notes/ffmpeg/</loc>
      <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://sfa-docs.com/ldap/</loc>
+     <loc>https://sfa-docs.com/notes/hosts/</loc>
      <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://sfa-docs.com/mysql/</loc>
+     <loc>https://sfa-docs.com/notes/imageMagick/</loc>
      <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://sfa-docs.com/symfony_demo_app/</loc>
+     <loc>https://sfa-docs.com/notes/ldap/</loc>
      <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://sfa-docs.com/vagrant/</loc>
+     <loc>https://sfa-docs.com/notes/mysql/</loc>
      <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://sfa-docs.com/mirror_gitlab_servers/</loc>
+     <loc>https://sfa-docs.com/notes/symfony_demo_app/</loc>
      <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://sfa-docs.com/sendBackup/</loc>
+     <loc>https://sfa-docs.com/notes/vagrant/</loc>
      <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://sfa-docs.com/update_server/</loc>
+     <loc>https://sfa-docs.com/scripts/mirror_gitlab_servers/</loc>
      <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://sfa-docs.com/vagrantDown/</loc>
+     <loc>https://sfa-docs.com/scripts/sendBackup/</loc>
+     <lastmod>2018-08-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://sfa-docs.com/scripts/update_server/</loc>
+     <lastmod>2018-08-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://sfa-docs.com/scripts/vagrantDown/</loc>
      <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
