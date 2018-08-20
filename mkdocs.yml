@@ -10,6 +10,9 @@ copyright: 'MIT'
 
 strict: true
 
+theme:
+  name: 'material'
+
 nav:
   - 'Introduction': 'README.md'
   - 'CSS':
