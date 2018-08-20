@@ -1,6 +1,6 @@
 site_name: Notes
 site_url: https://sfa-docs.com
-site_description: 'A collection of helpfull notes, simple solutions, hacks and things that I stumbled upon'
+site_description: 'A collection of helpful notes, simple solutions, hacks and things that I stumbled upon'
 site_author: 'Stavros Liaskos'
 
 repo_url: https://github.com/stavros-liaskos/notes.git
@@ -11,7 +11,7 @@ copyright: 'MIT'
 strict: true
 
 nav:
-  - 'Introduction': 'index.md'
+  - 'Introduction': 'README.md'
   - 'Notes':
     - 'Apache': 'apacheMac.md'
     - 'Docker': 'docker.md'
