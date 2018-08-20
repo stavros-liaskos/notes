@@ -13,3 +13,6 @@ Automatically deploy build files to `gh-pages` branch:
 ```
 bash deploy.sh
 ```
+
+## License
+MIT

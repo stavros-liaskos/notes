@@ -21,5 +21,10 @@ nav:
     - 'ImageMagick': 'imageMagick.md'
     - 'LDAP': 'ldap.md'
     - 'MySQL': 'mysql.md'
-    - 'Vagrant': 'vagrant.md'
     - 'Symfony Demo': 'symfony_demo_app.md'
+    - 'Vagrant': 'vagrant.md'
+  - 'Scripts':
+    - 'Mirror Servers': 'mirror_gitlab_servers.md'
+    - 'Send Backup': 'sendBackup.md'
+    - 'Update Server': 'update_server.md'
+    - 'VagrantDown': 'vagrantDown.md'

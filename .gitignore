@@ -1,1 +1,5 @@
 site
+mirror_gitlab_servers.md
+sendBackup.md
+update_server.md
+vagrantDown.md

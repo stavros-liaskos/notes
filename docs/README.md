@@ -1,5 +1,5 @@
 # Notes
-> A collection of helpfull notes, simple solutions, hacks and things that I stumbled upon
+> A collection of helpful notes, simple solutions, hacks and things that I stumbled upon
 
 ## Set up MkDocs 
    
@@ -11,5 +11,8 @@
 ## Deploy to GitHub Pages
 Automatically deploy build files to `gh-pages` branch:
 ```
-mkdocs gh-deploy
+bash deploy.sh
 ```
+
+## License
+MIT
