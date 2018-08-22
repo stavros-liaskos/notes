@@ -20,7 +20,7 @@
   background: green; 
 }
 ```
-In the end the nested property prevails: `background: red;`
+In the end the nested property prevails: `background: red;`  
 [Source](https://codepen.io/stavros-liaskos/pen/aaOowE)
 
 
