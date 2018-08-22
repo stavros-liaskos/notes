@@ -13,7 +13,7 @@
         <meta name="description" content="A collection of helpful notes, simple solutions, hacks and things that I stumbled upon">
       
       
-        <link rel="canonical" href="https://sfa-docs.com/notes/imageMagick/">
+        <link rel="canonical" href="https://sfa-docs.com/css/hacks/">
       
       
         <meta name="author" content="Stavros Liaskos">
@@ -42,7 +42,7 @@
     
     
       
-        <title>ImageMagick - Notes</title>
+        <title>Hacks - Notes</title>
       
     
     
@@ -96,6 +96,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="../../#tricks" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -118,7 +122,7 @@
                 Notes
               </span>
               <span class="md-header-nav__topic">
-                ImageMagick
+                Hacks
               </span>
             
           
@@ -245,10 +249,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       CSS
@@ -266,7 +272,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../css/selectors/" title="Selectors" class="md-nav__link">
+    <a href="../selectors/" title="Selectors" class="md-nav__link">
       Selectors
     </a>
   </li>
@@ -276,11 +282,63 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../css/hacks/" title="Hacks" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Hacks
+      </label>
+    
+    <a href="./" title="Hacks" class="md-nav__link md-nav__link--active">
       Hacks
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#target-only-one-browser-version" title="Target only one browser version" class="md-nav__link">
+    Target only one browser version
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css-rules-priority" title="CSS Rules Priority" class="md-nav__link">
+    CSS Rules Priority
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#view-variable-value" title="View variable value" class="md-nav__link">
+    View variable value
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -290,7 +348,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../css/line_height/" title="Line Heigh" class="md-nav__link">
+    <a href="../line_height/" title="Line Heigh" class="md-nav__link">
       Line Heigh
     </a>
   </li>
@@ -305,12 +363,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       Notes
@@ -328,7 +384,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../apacheMac/" title="Apache" class="md-nav__link">
+    <a href="../../notes/apacheMac/" title="Apache" class="md-nav__link">
       Apache
     </a>
   </li>
@@ -340,7 +396,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../docker/" title="Docker" class="md-nav__link">
+    <a href="../../notes/docker/" title="Docker" class="md-nav__link">
       Docker
     </a>
   </li>
@@ -352,7 +408,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../fail2ban/" title="Fail2Ban" class="md-nav__link">
+    <a href="../../notes/fail2ban/" title="Fail2Ban" class="md-nav__link">
       Fail2Ban
     </a>
   </li>
@@ -364,7 +420,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../ffmpeg/" title="Ffmpeg" class="md-nav__link">
+    <a href="../../notes/ffmpeg/" title="Ffmpeg" class="md-nav__link">
       Ffmpeg
     </a>
   </li>
@@ -376,7 +432,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../hosts/" title="Hosts" class="md-nav__link">
+    <a href="../../notes/hosts/" title="Hosts" class="md-nav__link">
       Hosts
     </a>
   </li>
@@ -386,18 +442,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" title="ImageMagick" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../notes/imageMagick/" title="ImageMagick" class="md-nav__link">
       ImageMagick
     </a>
-    
   </li>
 
         
@@ -407,7 +456,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../ldap/" title="LDAP" class="md-nav__link">
+    <a href="../../notes/ldap/" title="LDAP" class="md-nav__link">
       LDAP
     </a>
   </li>
@@ -419,7 +468,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../mysql/" title="MySQL" class="md-nav__link">
+    <a href="../../notes/mysql/" title="MySQL" class="md-nav__link">
       MySQL
     </a>
   </li>
@@ -431,7 +480,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../symfony_demo_app/" title="Symfony Demo" class="md-nav__link">
+    <a href="../../notes/symfony_demo_app/" title="Symfony Demo" class="md-nav__link">
       Symfony Demo
     </a>
   </li>
@@ -443,7 +492,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../vagrant/" title="Vagrant" class="md-nav__link">
+    <a href="../../notes/vagrant/" title="Vagrant" class="md-nav__link">
       Vagrant
     </a>
   </li>
@@ -545,18 +594,92 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#target-only-one-browser-version" title="Target only one browser version" class="md-nav__link">
+    Target only one browser version
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css-rules-priority" title="CSS Rules Priority" class="md-nav__link">
+    CSS Rules Priority
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#view-variable-value" title="View variable value" class="md-nav__link">
+    View variable value
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/stavros-liaskos/notes.git/edit/master/docs/notes/imageMagick.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/stavros-liaskos/notes.git/edit/master/docs/css/hacks.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>ImageMagick</h1>
-                
-                <pre><code class="bash">mogrify -format jpg *.png # converts all PNGs to JPGs (and deletes the PNGs!!)
+                <h1 id="tricks">Tricks</h1>
+<h2 id="target-only-one-browser-version">Target only one browser version</h2>
+<pre><code class="css">#element { 
+  color:pink \0/IE9; // (only for IE9!) 
+} 
 </code></pre>
+
+<p><a href="https://stackoverflow.com/questions/12296628/need-hack-for-ie9-only">Source</a></p>
+<h2 id="css-rules-priority">CSS Rules Priority</h2>
+<pre><code class="scss">.footer { 
+  .footer-item { 
+    background: red; 
+  } 
+}
+
+.footer-item { 
+  background: green; 
+}
+</code></pre>
+
+<p>In the end the nested property prevails: <code>background: red;</code>
+<a href="https://codepen.io/stavros-liaskos/pen/aaOowE">Source</a></p>
+<h2 id="view-variable-value">View variable value</h2>
+<pre><code class="scss">span {
+  $post: 'Vipers';
+
+  &amp;::after {
+    content: $post; 
+  }
+}
+</code></pre>
+
+<p><a href="https://codepen.io/stavros-liaskos/pen/QVbLmE">Source</a></p>
                 
                   
                 
@@ -577,7 +700,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../hosts/" title="Hosts" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../selectors/" title="Selectors" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -586,19 +709,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Hosts
+                Selectors
               </span>
             </div>
           </a>
         
         
-          <a href="../ldap/" title="LDAP" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../line_height/" title="Line Heigh" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                LDAP
+                Line Heigh
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
