@@ -43,7 +43,7 @@ to ensure expected behavior.
  Can a user navigate the application as expected and does it work? 
  You're testing the workflow (where System tests test the whole system)
 
-## A/B Test
+## A/B Test (aka Split Testing)
  Randomly redirect a percentage of clients to another version of the application, 
  gather data and generate statistics
 

@@ -17,6 +17,7 @@ nav:
   - 'Introduction': 'README.md'
   - 'CSS':
     - 'Selectors': 'css/selectors.md'
+    - 'Hacks': 'css/hacks.md'
     - 'Line Heigh': 'css/line_height.md'
   - 'Notes':
     - 'Apache': 'notes/apacheMac.md'
