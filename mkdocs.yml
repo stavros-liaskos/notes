@@ -36,3 +36,4 @@ nav:
     - 'Update Server': 'scripts/update_server.md'
     - 'VagrantDown': 'scripts/vagrantDown.md'
   - 'Tests': 'tests.md'
+  - 'Abbreviations': 'abbreviations.md'
