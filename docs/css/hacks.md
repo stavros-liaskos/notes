@@ -8,6 +8,14 @@
 ```
 [Source](https://stackoverflow.com/questions/12296628/need-hack-for-ie9-only)
 
+## Select all but the first
+```css
+p + p {
+  background: cyan;
+}
+```
+[Source](https://codepen.io/stavros-liaskos/pen/oPJjaq)
+
 ## CSS Rules Priority
 ```scss
 .footer { 
