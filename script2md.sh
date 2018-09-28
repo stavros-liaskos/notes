@@ -1,6 +1,7 @@
 #!/bin/bash
-
+# Creates an .md file out of .sh scripts
 # Delete old gitignore and init the new one
+
 rm -rf ./.gitignore
 touch ./.gitignore
 echo 'site' >> ./.gitignore
