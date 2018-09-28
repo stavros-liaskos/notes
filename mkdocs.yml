@@ -3,7 +3,7 @@ site_url: https://sfa-docs.com
 site_description: 'A collection of helpful notes, simple solutions, hacks and things that I stumbled upon'
 site_author: 'Stavros Liaskos'
 
-repo_url: https://github.com/stavros-liaskos/notes.git
+repo_url: https://github.com/stavros-liaskos/notes
 repo_name: 'Github'
 
 copyright: 'MIT'
