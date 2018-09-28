@@ -9,7 +9,12 @@
 
 
 ## Deploy to GitHub Pages
-The following script runs on `post-commit` and deploys build files to `gh-pages` branch:
+First you need to symlink the `post-commit` script to `.git/hooks`:
+```bash
+ln -sf hooks/post-commit .git/hooks/
+```
+
+After that, mkdocs are deployed to `gh-pages` branch after commit automatically by running the following script:
 ```
 bash deploy.sh
 ```
