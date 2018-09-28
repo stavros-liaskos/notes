@@ -11,7 +11,7 @@
 ## Deploy to GitHub Pages
 First you need to symlink the `post-commit` script to `.git/hooks`:
 ```bash
-ln -sf hooks/post-commit .git/hooks/
+cp hooks/post-commit .git/hooks/post-commit
 ```
 
 After that, mkdocs are deployed to `gh-pages` branch after commit automatically by running the following script:
