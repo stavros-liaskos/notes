@@ -167,7 +167,7 @@
   
 
 
-  <a href="https://github.com/stavros-liaskos/notes.git/" title="Go to repository" class="md-source" data-md-source="github">
+  <a href="https://github.com/stavros-liaskos/notes/" title="Go to repository" class="md-source" data-md-source="github">
     
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
@@ -216,7 +216,7 @@
   
 
 
-  <a href="https://github.com/stavros-liaskos/notes.git/" title="Go to repository" class="md-source" data-md-source="github">
+  <a href="https://github.com/stavros-liaskos/notes/" title="Go to repository" class="md-source" data-md-source="github">
     
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
@@ -526,7 +526,7 @@
 
 
   <li class="md-nav__item">
-    <a href="scripts/mirror_gitlab_servers/" title="Mirror Servers" class="md-nav__link">
+    <a href="scripts/mirror_gitlab_servers.md" title="Mirror Servers" class="md-nav__link">
       Mirror Servers
     </a>
   </li>
@@ -538,7 +538,7 @@
 
 
   <li class="md-nav__item">
-    <a href="scripts/sendBackup/" title="Send Backup" class="md-nav__link">
+    <a href="scripts/sendBackup.md" title="Send Backup" class="md-nav__link">
       Send Backup
     </a>
   </li>
@@ -550,7 +550,7 @@
 
 
   <li class="md-nav__item">
-    <a href="scripts/update_server/" title="Update Server" class="md-nav__link">
+    <a href="scripts/update_server.md" title="Update Server" class="md-nav__link">
       Update Server
     </a>
   </li>
@@ -562,7 +562,7 @@
 
 
   <li class="md-nav__item">
-    <a href="scripts/vagrantDown/" title="VagrantDown" class="md-nav__link">
+    <a href="scripts/vagrantDown.md" title="VagrantDown" class="md-nav__link">
       VagrantDown
     </a>
   </li>
@@ -654,7 +654,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/stavros-liaskos/notes.git/edit/master/docs/README.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/stavros-liaskos/notes/edit/master/docs/README.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
                 <h1 id="notes">Notes</h1>
@@ -668,7 +668,11 @@
 <li><code>mkdocs help</code> - Print this help message.</li>
 </ul>
 <h2 id="deploy-to-github-pages">Deploy to GitHub Pages</h2>
-<p>The following script runs on <code>post-commit</code> and deploys build files to <code>gh-pages</code> branch:</p>
+<p>First you need to symlink the <code>post-commit</code> script to <code>.git/hooks</code>:</p>
+<pre><code class="bash">ln -sf hooks/post-commit .git/hooks/
+</code></pre>
+
+<p>After that, mkdocs are deployed to <code>gh-pages</code> branch after commit automatically by running the following script:</p>
 <pre><code>bash deploy.sh
 </code></pre>
 
