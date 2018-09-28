@@ -1,6 +1,6 @@
 # Tricks
 
-## Target only 1 browser version
+## Target only 1 browser version .
 ```css
 #element { 
   color:pink \0/IE9; // (only for IE9!) 
