@@ -9,7 +9,7 @@
 
 
 ## Deploy to GitHub Pages
-Automatically deploy build files to `gh-pages` branch:
+The following script runs on `post-commit` and deploys build files to `gh-pages` branch:
 ```
 bash deploy.sh
 ```
