@@ -669,7 +669,7 @@
 </ul>
 <h2 id="deploy-to-github-pages">Deploy to GitHub Pages</h2>
 <p>First you need to symlink the <code>post-commit</code> script to <code>.git/hooks</code>:</p>
-<pre><code class="bash">ln -sf hooks/post-commit .git/hooks/
+<pre><code class="bash">cp hooks/post-commit .git/hooks/post-commit
 </code></pre>
 
 <p>After that, mkdocs are deployed to <code>gh-pages</code> branch after commit automatically by running the following script:</p>
