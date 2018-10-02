@@ -1,4 +1,4 @@
-# Notes
+# Notes 
 > A collection of helpful notes, simple solutions, hacks and things that I stumbled upon
 
 ## Set up MkDocs 
