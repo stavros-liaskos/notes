@@ -8,7 +8,7 @@ ul + p 			    { adjacent: only first paragraph preceding ul }
 ul ~ p 			    { all paragraphs preceding ul }
 a[title] 		    { a with attribute title }
 a[href=”in.gr”]     { only a with href=in.gr }
-a[href*="any"] 	    {value must appear somewhere in the attribute }
-a[href^="http"] 	{attribute must start with this value }
+a[href*="any"] 	    { value must appear somewhere in the attribute }
+a[href^="http"] 	{ attribute must start with this value }
 a[href$=".jpg"] 	{ attribute must end with this value }
 ```
