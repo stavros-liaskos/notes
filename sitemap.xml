@@ -26,6 +26,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://sfa-docs.com/notes/gitBisect/</loc>
+     <lastmod>2019-07-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://sfa-docs.com/notes/docker/</loc>
      <lastmod>2019-07-25</lastmod>
      <changefreq>daily</changefreq>
