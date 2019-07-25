@@ -21,6 +21,7 @@ nav:
     - 'Line Heigh': 'css/line_height.md'
   - 'Notes':
     - 'Apache': 'notes/apacheMac.md'
+    - 'Git Bisect': 'notes/gitBisect.md'
     - 'Docker': 'notes/docker.md'
     - 'Fail2Ban': 'notes/fail2ban.md'
     - 'Ffmpeg': 'notes/ffmpeg.md'
