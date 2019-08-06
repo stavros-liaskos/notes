@@ -13,7 +13,7 @@
         <meta name="description" content="A collection of helpful notes, simple solutions, hacks and things that I stumbled upon">
       
       
-        <link rel="canonical" href="https://sfa-docs.com/notes/apacheMac/">
+        <link rel="canonical" href="https://sfa-docs.com/notes/graphql/">
       
       
         <meta name="author" content="Stavros Liaskos">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Apache - Notes</title>
+        <title>GraphQL - Notes</title>
       
     
     
@@ -83,7 +83,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#commands" tabindex="1" class="md-skip">
+      <a href="#graphql-basics" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -109,7 +109,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Apache
+                GraphQL
               
             </span>
           
@@ -311,45 +311,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Apache
-      </label>
-    
-    <a href="./" title="Apache" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../apacheMac/" title="Apache" class="md-nav__link">
       Apache
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#commands" title="Commands" class="md-nav__link">
-    Commands
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -381,11 +347,100 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../graphql/" title="GraphQL" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        GraphQL
+      </label>
+    
+    <a href="./" title="GraphQL" class="md-nav__link md-nav__link--active">
       GraphQL
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#graphql-basics" title="GraphQL Basics" class="md-nav__link">
+    GraphQL Basics
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variables" title="Variables" class="md-nav__link">
+    Variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directives" title="Directives" class="md-nav__link">
+    Directives
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aliases" title="Aliases" class="md-nav__link">
+    Aliases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fragments" title="Fragments" class="md-nav__link">
+    Fragments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mutations" title="Mutations" class="md-nav__link">
+    Mutations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graphql-schemas" title="GraphQL Schemas" class="md-nav__link">
+    GraphQL Schemas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source" title="Source" class="md-nav__link">
+    Source
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -605,8 +660,63 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" title="Commands" class="md-nav__link">
-    Commands
+  <a href="#graphql-basics" title="GraphQL Basics" class="md-nav__link">
+    GraphQL Basics
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variables" title="Variables" class="md-nav__link">
+    Variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directives" title="Directives" class="md-nav__link">
+    Directives
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aliases" title="Aliases" class="md-nav__link">
+    Aliases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fragments" title="Fragments" class="md-nav__link">
+    Fragments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mutations" title="Mutations" class="md-nav__link">
+    Mutations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graphql-schemas" title="GraphQL Schemas" class="md-nav__link">
+    GraphQL Schemas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source" title="Source" class="md-nav__link">
+    Source
   </a>
   
 </li>
@@ -627,18 +737,134 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/stavros-liaskos/notes/edit/master/docs/notes/apacheMac.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/stavros-liaskos/notes/edit/master/docs/notes/graphql.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Apache</h1>
+                  <h1>GraphQL</h1>
                 
-                <h2 id="commands">Commands</h2>
-<pre><code class="bash">apachectl configtest        # test configuration
-apachectl -t                # test configuration
-sudo service apache2 reload # restart apache
-sudo apachectl restart      # restart apache
-/etc/apache2/users/         # users config
+                <h2 id="graphql-basics">GraphQL Basics</h2>
+<pre><code class="graphql">query Hero($episode: Episode, $withFriends: Boolean! = true) {
+  hero(episode: $episode) {
+    name
+    friends @include(if: $withFriends) {
+      name
+    }
+  }
+}
 </code></pre>
+
+<h5 id="variables">Variables</h5>
+<p>Example: <code>$withFriends: Boolean! = true</code>  </p>
+<table>
+<thead>
+<tr>
+<th>Example</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$withFriends</td>
+<td>variable name</td>
+</tr>
+<tr>
+<td>Boolean</td>
+<td>type</td>
+</tr>
+<tr>
+<td>!</td>
+<td>required var</td>
+</tr>
+<tr>
+<td>true</td>
+<td>default value</td>
+</tr>
+</tbody>
+</table>
+<h5 id="directives">Directives</h5>
+<p>@include(if: Boolean) Only include this field in the result if the argument is <code>true</code><br />
+@skip(if: Boolean) Skip this field if the argument is <code>true</code></p>
+<h5 id="aliases">Aliases</h5>
+<p>Help you rename the result of a field to anything you want.</p>
+<pre><code class="graphql">{
+   empireHero: hero(episode: EMPIRE) {
+     name
+   }
+   jediHero: hero(episode: JEDI) {
+     name
+   }
+}
+</code></pre>
+
+<h5 id="fragments">Fragments</h5>
+<p>Fragments are reusable units, you can think of them as functions that return common fractions  </p>
+<pre><code class="graphql">query HeroComparison($first: Int = 3) {
+  leftComparison: hero(episode: EMPIRE) {
+    ...comparisonFields
+  }
+  rightComparison: hero(episode: JEDI) {
+    ...comparisonFields
+  }
+}
+
+fragment comparisonFields on Character {
+  name
+  friendsConnection(first: $first) {
+    totalCount
+  }
+}
+</code></pre>
+
+<h5 id="mutations">Mutations</h5>
+<p>Mutations can modify server-side data and return nested fields  </p>
+<pre><code class="graphql">mutation CreateReviewForEpisode($ep: Episode!, $review: ReviewInput!) {
+  createReview(episode: $ep, review: $review) {
+    stars
+    commentary
+  }
+}
+</code></pre>
+
+<h2 id="graphql-schemas">GraphQL Schemas</h2>
+<p>Schemas can be useful in a few cases, for example, when we want to predict the outcome of the query, What fields can we 
+select, what kind of object it could return and more. <br />
+Because GraphQL can be implemented in any language, there is its own implementation for defining schemas, GraphQL Schema 
+language. <br />
+Example:</p>
+<pre><code class="graphql">type Character {
+  appearsIn: [Episode!]!
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Example</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Character</td>
+<td>GraphQL Object type</td>
+</tr>
+<tr>
+<td>appearsIn</td>
+<td>fields of Character type</td>
+</tr>
+<tr>
+<td>[Episode!]!</td>
+<td>non-nullable array of Episodes</td>
+</tr>
+<tr>
+<td>Episode!</td>
+<td>non-nullable Episode</td>
+</tr>
+</tbody>
+</table>
+<h2 id="source">Source</h2>
+<p><a href="https://graphql.org/learn/queries/">GraphQL queries</a><br />
+<a href="https://graphql.org/learn/schema/">GraphQL schema</a></p>
                 
                   
                 
@@ -659,7 +885,7 @@ sudo apachectl restart      # restart apache
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../css/line_height/" title="Line Heigh" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../gitBisect/" title="Git Bisect" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -668,19 +894,19 @@ sudo apachectl restart      # restart apache
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Line Heigh
+                Git Bisect
               </span>
             </div>
           </a>
         
         
-          <a href="../docker/" title="Docker" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../fail2ban/" title="Fail2Ban" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Docker
+                Fail2Ban
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
