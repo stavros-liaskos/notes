@@ -48,7 +48,7 @@ to ensure expected behavior.
  gather data and generate statistics
 
 
-![Screenshot](./media/tests.png)
+![Screenshot](media/tests.png)
 
 
 ## Process 

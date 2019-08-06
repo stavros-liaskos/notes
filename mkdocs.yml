@@ -14,27 +14,28 @@ theme:
   name: 'material'
 
 nav:
-  - 'Introduction': 'README.md'
-  - 'CSS':
-    - 'Selectors': 'css/selectors.md'
-    - 'Hacks': 'css/hacks.md'
-    - 'Line Heigh': 'css/line_height.md'
-  - 'Notes':
-    - 'Apache': 'notes/apacheMac.md'
-    - 'Git Bisect': 'notes/gitBisect.md'
-    - 'Docker': 'notes/docker.md'
-    - 'Fail2Ban': 'notes/fail2ban.md'
-    - 'Ffmpeg': 'notes/ffmpeg.md'
-    - 'Hosts': 'notes/hosts.md'
-    - 'ImageMagick': 'notes/imageMagick.md'
-    - 'LDAP': 'notes/ldap.md'
-    - 'MySQL': 'notes/mysql.md'
-    - 'Symfony Demo': 'notes/symfony_demo_app.md'
-    - 'Vagrant': 'notes/vagrant.md'
-  - 'Scripts':
-    - 'Mirror Servers': 'scripts/mirror_gitlab_servers.md'
-    - 'Send Backup': 'scripts/sendBackup.md'
-    - 'Update Server': 'scripts/update_server.md'
-    - 'VagrantDown': 'scripts/vagrantDown.md'
-  - 'Tests': 'tests.md'
-  - 'Abbreviations': 'abbreviations.md'
+  - Introduction: index.md
+  - CSS:
+    - Selectors: css/selectors.md
+    - Hacks: css/hacks.md
+    - Line Heigh: css/line_height.md
+  - Notes:
+    - Apache: notes/apacheMac.md
+    - Docker: notes/docker.md
+    - Git Bisect: notes/gitBisect.md
+    - GraphQL: notes/graphql.md
+    - Fail2Ban: notes/fail2ban.md
+    - Ffmpeg: notes/ffmpeg.md
+    - Hosts: notes/hosts.md
+    - ImageMagick: notes/imageMagick.md
+    - LDAP: notes/ldap.md
+    - MySQL: notes/mysql.md
+    - Symfony Demo: notes/symfony_demo_app.md
+    - Vagrant: notes/vagrant.md
+  - Scripts:
+      - Mirror Servers: scripts/mirror_gitlab_servers.md
+      - Send Backup: scripts/sendBackup.md
+      - Update Server: scripts/update_server.md
+      - VagrantDown: scripts/vagrantDown.md
+  - Tests: tests.md
+  - Abbreviations: abbreviations.md
