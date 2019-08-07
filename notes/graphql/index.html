@@ -424,6 +424,47 @@
     GraphQL Schemas
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scalar-types" title="Scalar types" class="md-nav__link">
+    Scalar types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enumeration-types" title="Enumeration types" class="md-nav__link">
+    Enumeration types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interfaces" title="Interfaces" class="md-nav__link">
+    Interfaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#union-types" title="Union types" class="md-nav__link">
+    Union types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-types" title="Input types" class="md-nav__link">
+    Input types
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -712,6 +753,47 @@
     GraphQL Schemas
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scalar-types" title="Scalar types" class="md-nav__link">
+    Scalar types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enumeration-types" title="Enumeration types" class="md-nav__link">
+    Enumeration types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interfaces" title="Interfaces" class="md-nav__link">
+    Interfaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#union-types" title="Union types" class="md-nav__link">
+    Union types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-types" title="Input types" class="md-nav__link">
+    Input types
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -833,6 +915,7 @@ language. <br />
 Example:</p>
 <pre><code class="graphql">type Character {
   appearsIn: [Episode!]!
+  height(unit: LengthUnit = METER): Float
 }
 </code></pre>
 
@@ -860,8 +943,121 @@ Example:</p>
 <td>Episode!</td>
 <td>non-nullable Episode</td>
 </tr>
+<tr>
+<td><code>height</code> has one <em>argument</em>, <code>unit</code>. Since it's an <em>optional</em> field, it can have a <em>default</em> value, in this case it's set to <code>METER</code>.</td>
+<td></td>
+</tr>
 </tbody>
 </table>
+<h5 id="scalar-types">Scalar types</h5>
+<table>
+<thead>
+<tr>
+<th><!-- --></th>
+<th><!-- --></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Int</td>
+<td>Integer</td>
+</tr>
+<tr>
+<td>Float</td>
+<td>Double</td>
+</tr>
+<tr>
+<td>String</td>
+<td>String</td>
+</tr>
+<tr>
+<td>Boolean</td>
+<td><code>true</code>/<code>false</code></td>
+</tr>
+<tr>
+<td>ID</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>ID</code> is not intended to be human-readable. It's often used to refetch an object or for caching.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>You can also define custom scalar types:<br />
+<code>scalar Date</code>  </p>
+</blockquote>
+<p><a href="https://graphql.org/learn/schema/#scalar-types">source</a></p>
+<h5 id="enumeration-types">Enumeration types</h5>
+<p><em>Enums</em> are types restricted to a particular set of values.  </p>
+<pre><code class="graphql">enum Episode {
+  NEWHOPE
+  EMPIRE
+  JEDI
+}
+</code></pre>
+
+<p><a href="https://graphql.org/learn/schema/#enumeration-types">source</a></p>
+<h5 id="interfaces">Interfaces</h5>
+<p>An <em>Interface</em> is an abstract type that includes a certain set of fields that a type must include to implement the interface.   </p>
+<pre><code class="graphql">interface Character {
+  name: String!
+}
+
+type Human implements Character {
+  name: String!
+  starships: [Starship]
+}
+
+type Droid implements Character {
+  name: String!
+  primaryFunction: String
+}
+</code></pre>
+
+<p><a href="https://graphql.org/learn/schema/#interfaces">source</a></p>
+<h5 id="union-types">Union types</h5>
+<p>Union types are very similar to interfaces, but they don't get to specify any common fields between the types.<br />
+<code>union SearchResult = Human | Droid | Starship</code></p>
+<pre><code class="graphql">{
+  search(text: &quot;an&quot;) {
+    __typename
+    ... on Human {
+      name
+      height
+    }
+    ... on Droid {
+      name
+      primaryFunction
+    }
+    ... on Starship {
+      name
+      length
+    }
+  }
+}
+</code></pre>
+
+<p><a href="https://graphql.org/learn/schema/#union-types">source</a></p>
+<h5 id="input-types">Input types</h5>
+<p>Inputs are complex object especially useful in case of mutations.   </p>
+<pre><code class="graphql">input ReviewInput {
+  stars: Int!
+  commentary: String
+}
+</code></pre>
+
+<p>Usage:</p>
+<pre><code class="graphql">mutation CreateReviewForEpisode($ep: Episode!, $review: ReviewInput!) {
+  createReview(episode: $ep, review: $review) {
+    stars
+    commentary
+  }
+}
+</code></pre>
+
+<p><a href="https://graphql.org/learn/schema/#input-types">source</a></p>
 <h2 id="source">Source</h2>
 <p><a href="https://graphql.org/learn/queries/">GraphQL queries</a><br />
 <a href="https://graphql.org/learn/schema/">GraphQL schema</a></p>
