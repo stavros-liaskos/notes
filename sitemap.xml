@@ -2,112 +2,117 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://sfa-docs.com/</loc>
-     <lastmod>2019-08-07</lastmod>
+     <lastmod>2019-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sfa-docs.com/css/selectors/</loc>
-     <lastmod>2019-08-07</lastmod>
+     <lastmod>2019-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sfa-docs.com/css/hacks/</loc>
-     <lastmod>2019-08-07</lastmod>
+     <lastmod>2019-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sfa-docs.com/css/line_height/</loc>
-     <lastmod>2019-08-07</lastmod>
+     <lastmod>2019-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sfa-docs.com/notes/apacheMac/</loc>
-     <lastmod>2019-08-07</lastmod>
+     <lastmod>2019-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sfa-docs.com/notes/docker/</loc>
-     <lastmod>2019-08-07</lastmod>
+     <lastmod>2019-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sfa-docs.com/notes/gitBisect/</loc>
-     <lastmod>2019-08-07</lastmod>
+     <lastmod>2019-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sfa-docs.com/notes/graphql/</loc>
-     <lastmod>2019-08-07</lastmod>
+     <lastmod>2019-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sfa-docs.com/notes/fail2ban/</loc>
-     <lastmod>2019-08-07</lastmod>
+     <lastmod>2019-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sfa-docs.com/notes/ffmpeg/</loc>
-     <lastmod>2019-08-07</lastmod>
+     <lastmod>2019-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sfa-docs.com/notes/hosts/</loc>
-     <lastmod>2019-08-07</lastmod>
+     <lastmod>2019-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sfa-docs.com/notes/imageMagick/</loc>
-     <lastmod>2019-08-07</lastmod>
+     <lastmod>2019-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sfa-docs.com/notes/ldap/</loc>
-     <lastmod>2019-08-07</lastmod>
+     <lastmod>2019-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sfa-docs.com/notes/mysql/</loc>
-     <lastmod>2019-08-07</lastmod>
+     <lastmod>2019-10-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://sfa-docs.com/notes/programming/</loc>
+     <lastmod>2019-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sfa-docs.com/notes/symfony_demo_app/</loc>
-     <lastmod>2019-08-07</lastmod>
+     <lastmod>2019-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sfa-docs.com/notes/vagrant/</loc>
-     <lastmod>2019-08-07</lastmod>
+     <lastmod>2019-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sfa-docs.com/scripts/mirror_gitlab_servers/</loc>
-     <lastmod>2019-08-07</lastmod>
+     <lastmod>2019-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sfa-docs.com/scripts/sendBackup/</loc>
-     <lastmod>2019-08-07</lastmod>
+     <lastmod>2019-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sfa-docs.com/scripts/update_server/</loc>
-     <lastmod>2019-08-07</lastmod>
+     <lastmod>2019-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sfa-docs.com/scripts/vagrantDown/</loc>
-     <lastmod>2019-08-07</lastmod>
+     <lastmod>2019-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sfa-docs.com/tests/</loc>
-     <lastmod>2019-08-07</lastmod>
+     <lastmod>2019-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sfa-docs.com/abbreviations/</loc>
-     <lastmod>2019-08-07</lastmod>
+     <lastmod>2019-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
