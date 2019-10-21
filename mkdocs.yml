@@ -30,6 +30,7 @@ nav:
     - ImageMagick: notes/imageMagick.md
     - LDAP: notes/ldap.md
     - MySQL: notes/mysql.md
+    - Programming Paradigms: notes/programming.md
     - Symfony Demo: notes/symfony_demo_app.md
     - Vagrant: notes/vagrant.md
   - Scripts:
